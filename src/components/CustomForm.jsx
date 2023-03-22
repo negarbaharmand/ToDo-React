@@ -1,9 +1,20 @@
-import { PlusIcon } from "@heroicons/react/24/solid";
+import { useState } from "react";
 
-const CustomForm = () => {
+//library imports
+import { PlusIcon } from "@heroicons/react/24/solid";
+import react from "@heroicons/react";
+
+const CustomForm = ({ addTask }) => {
+  const [task, setTask] = useState("");
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    addTask({
+      name: task,
+      checked: false,
+      id: Date.now(),
+    });
+    setTask("");
   };
   return (
     <form className="todo" onSubmit={handleFormSubmit}>
@@ -12,14 +23,14 @@ const CustomForm = () => {
           type="text"
           id="task"
           className="input"
-          //value={task}
+          value={task}
           onInput={(e) => setTask(e.target.value)}
           required
           autoFocus
           maxLength={60}
           placeholder="Enter Task"
         />
-        <label htmlFor="task" id="label">
+        <label htmlFor="task" className="label">
           Enter Task
         </label>
       </div>
