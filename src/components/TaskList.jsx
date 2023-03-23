@@ -2,7 +2,7 @@
 import TaskItem from "./TaskItem";
 //styles
 import styles from "./Tasklist.module.css";
-const TaskList = ({ tasks, deleteTask }) => {
+const TaskList = ({ tasks, deleteTask, toggleTask }) => {
   return (
     <ul className={StyleSheet.tasks}>
       {tasks
