@@ -1,4 +1,4 @@
-This repository contains a simple TODO list application built using React and Vite. It allows users to add, edit and remove tasks, as well as mark them as completed.
+This repository contains a simple TODO list application built using React. It allows users to add, edit and remove tasks, as well as mark them as complete.
 
 ## Installation
 
